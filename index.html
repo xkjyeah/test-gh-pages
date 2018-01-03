@@ -1,0 +1,42 @@
+<html>
+<head>
+  <style type="text/css">
+#faq {
+  border: solid 1px #CCC;
+  counter-reset: num-faq-entries;
+}
+
+#faq h1 {
+  color: #888;
+  font-size: 24px;
+  font-weight: bold;
+  margin: auto;
+}
+
+#faq h1::before {
+  /* Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters */
+  counter-increment: num-faq-entries;
+  content: counter(num-faq-entries) ". ";
+}
+
+#faq h2 {
+  color: #888;
+  font-size: 20px;
+  font-weight: bold;
+  margin: auto;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Welcome to XYZ FAQ</h1>
+
+  <div id="faq" data-faq-o-matic="https://github.com/xkjyeah/test-gh-pages/blob/gh-pages/FAQ.md">
+  </div>
+
+  The above FAQ can be edited on
+  <a href="https://github.com/xkjyeah/test-gh-pages/blob/gh-pages/FAQ.md">Github</a>
+
+  <script src="https://rawgit.com/xkjyeah/test-gh-pages/master/dist/bundle.js" async defer onload="FaqOMatic.auto()"></script>
+</body>
+</html>
