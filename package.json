@@ -1,0 +1,21 @@
+{
+  "name": "faq-o-matic",
+  "version": "0.1.0",
+  "description": "Markdown Embedder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "babel-loader": "^7.1.2",
+    "showdown": "^1.8.6",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0"
+  }
+}
