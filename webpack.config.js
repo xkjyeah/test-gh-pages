@@ -1,4 +1,5 @@
 const path = require('path')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: path.resolve('src/index.js'),
@@ -16,5 +17,8 @@ module.exports = {
         exclude: /node_modules/,
       }
     ]
-  }
+  },
+  plugins: process.env.NODE_ENV === 'production'
+   ? [new UglifyJsPlugin()]
+   : []
 }
